@@ -12,6 +12,7 @@ active_tab: faq
 ### Reference books
 
 * There is no official textbook for the course, but if you would like to read further about NLP, here are some good reference books:
+    * [Neural Networks: Zero to Hero](https://github.com/karpathy/nn-zero-to-hero) by Andrej Karpathy.
     * [Neural Network methods for Natural Language Processing](http://www.morganclaypool.com/doi/10.2200/S00762ED1V01Y201703HLT037) by Yoav Goldberg.
     * [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) by [Daniel Jurafsky](http://www.stanford.edu/~jurafsky) and [James Martin](http://www.cs.colorado.edu/~martin).
 
