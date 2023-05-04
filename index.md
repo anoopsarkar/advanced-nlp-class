@@ -69,7 +69,7 @@ At the end of this course, the student should:
 </ul>
 
 #### Asking for help
-* Use [ChatGPT](https://chat.openai.com) and [Codex](https://platform.openai.com/docs/guides/code)
+* Use the web, [ChatGPT](https://chat.openai.com) and [Codex](https://platform.openai.com/docs/guides/code)
 * Ask for help on [the discussion board]({{ site.coursys }}/discussion)
 * Instructor office hours: TBD
 * <b>No emails</b> to the TAs and only emails that cannot go to discussion board can be sent to the instructor
