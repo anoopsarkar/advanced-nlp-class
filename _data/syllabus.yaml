@@ -1,0 +1,12 @@
+- title: "Course Introduction"
+  tag: intro
+  include: true
+  current: false
+  notes:
+    - title: "Introduction to NLP Tasks"
+      url: "assets/slides/nlptasks.pdf"
+  links:
+    - author: "Various Allen AI researchers"
+      title: "NLP Highlights podcast"
+      url: "https://soundcloud.com/nlp-highlights"
+      optional: true

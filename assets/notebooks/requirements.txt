@@ -1,0 +1,13 @@
+pytest
+numpy
+scipy
+matplotlib
+pandas
+notebook
+sklearn
+nltk
+gensim
+jupyter_contrib_nbextensions
+jupyter_nbextensions_configurator
+jupyterthemes
+pymagnitude
