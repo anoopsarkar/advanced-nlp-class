@@ -76,7 +76,7 @@ At the end of this course, the student should:
 * Use only SFU email address and use `cmpt419:` or `cmpt983:` (for ugrad and grad respectively) as subject prefix
 
 #### Time and place
-* Mon 10:30-12:20 [WMC 3210](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html) 
+* Mon 10:30-12:20 [AQ 3153](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html) (room change from the original: [WMC 3210](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html))
 * Wed 10:30-11:20 [WMC 3260](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html)
 * Last day of classes: {{ site.lastday }}
 
