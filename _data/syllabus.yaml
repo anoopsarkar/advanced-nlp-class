@@ -1,12 +1,25 @@
 - title: "Course Introduction"
   tag: intro
   include: true
-  current: false
+  current: true
   notes:
-    - title: "Introduction to NLP Tasks"
-      url: "assets/slides/nlptasks.pdf"
+    - title: "Alignment Exercise"
+      author: "Kevin Knight"
+      url: "assets/slides/centauri-arcturan-align.pdf"
+    - title: "Language Models"
+      url: "assets/slides/lm.pdf"
   links:
     - author: "Various Allen AI researchers"
       title: "NLP Highlights podcast"
       url: "https://soundcloud.com/nlp-highlights"
       optional: true
+- title: "Cross Language Attention"
+  tag: cross_attention
+  include: true
+  current: true
+  notes:
+    - title: "Neural Machine Translation by Jointly Learning to Align and Translate"
+      author: "Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio"
+      url: "https://arxiv.org/abs/1409.0473"
+    - title: "Lecture notes"
+      url: "slides/assets/bahdanau2015.pdf"
