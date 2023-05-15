@@ -509,8 +509,9 @@ The grading is split up into the following components:
 * Python notebook write-up
 * Check if each group member has written about what they did in the Python notebook.
 
-Your accuracy should be equal to or greater than both the scores
-listed for dev and test data to obtain the corresponding marks.
+Your accuracy should be equal to or greater than the scores listed
+for dev and test data to obtain the corresponding marks (dev and
+test sets are marked separately).
 
 | **dev accuracy** | **test accuracy** | **Marks** | **Grade** |
 | .02 | .00 | 0   | F  |
