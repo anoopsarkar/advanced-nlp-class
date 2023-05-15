@@ -524,7 +524,7 @@ test sets are marked separately).
 | .51 | .42 | 85  | B+ |
 | .58 | .49 | 90  | A- |
 | .65 | .56 | 95  | A  |
-| .72 | .75 | 100 | A+ |
+| .72 | .63 | 100 | A+ |
 {: .table}
 
 The score will be normalized to the marks on Coursys for the dev
