@@ -23,7 +23,7 @@ Along with your group members, register yourself as part of a group on [Coursys]
 
 Create a memorable name for your group. If you need help, [seek help](https://www.wordlab.com/name-generators/team-name-generator/).
 
-Go to the [Course Discussion Page]({{ site.coursys }}) and select `[Activity Digest]`.
+Go to the [Course Discussion Page]({{ site.coursys }}/forum) and select `[Activity Digest]`.
 Change the `Digest Email Frequency:` to a setting that send you email notifications, like so:
 
 ![Coursys Subscription](assets/img/coursys_subscription.png)
