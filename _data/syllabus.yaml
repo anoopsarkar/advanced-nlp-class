@@ -53,9 +53,13 @@
       url: "https://proceedings.mlr.press/v119/huang20f.html"
 - title: "Pre-training Transformers"
   tag: "bert"
-  include: false
+  include: true
   current: false
   notes:
+    - title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+      author: "Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova"
+      url: "https://arxiv.org/abs/1810.04805"
+  links:
     - title: "Neural Machine Translation of Rare Words with Subword Units"
       author: "Rico Sennrich, Barry Haddow, Alexandra Birch"
       url: "https://arxiv.org/abs/1508.07909"
