@@ -16,10 +16,46 @@
 - title: "Cross Language Attention"
   tag: cross_attention
   include: true
-  current: true
+  current: false
   notes:
     - title: "Neural Machine Translation by Jointly Learning to Align and Translate"
       author: "Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio"
       url: "https://arxiv.org/abs/1409.0473"
     - title: "Lecture notes"
       url: "assets/slides/bahdanau2015.pdf"
+  links:
+    - title: "Sequence to Sequence Learning with Neural Networks"
+      author: "Ilya Sutskever, Oriol Vinyals, Quoc V. Le"
+      url: "https://arxiv.org/abs/1409.3215"
+    - title: "Effective Approaches to Attention-based Neural Machine Translation"
+      author: "Minh-Thang Luong, Hieu Pham, Christopher D. Manning"
+      url: "https://arxiv.org/abs/1508.04025"
+- title: "Self Attention"
+  tag: self_attention
+  include: true
+  current: true
+  notes:
+    - title: "Attention is all you need"
+      author: "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin"
+      url: "https://arxiv.org/abs/1706.03762"
+  links:
+    - title: "Convolutional Sequence to Sequence Learning"
+      author: "Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, Yann N. Dauphin"
+      url: "https://arxiv.org/abs/1705.03122"
+    - title: "Layer Normalization"
+      author: "Jimmy Lei Ba, Jamie Ryan Kiros, Geoffrey E. Hinton"
+      url: "https://arxiv.org/abs/1607.06450"
+    - title: "Dropout: A Simple Way to Prevent Neural Networks from Overfitting"
+      author: "Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, Ruslan Salakhutdinov"
+      url: "https://jmlr.org/papers/v15/srivastava14a.html"
+    - title: "Improving Transformer Optimization Through Better Initialization"
+      author: "Xiao Shi Huang, Felipe Perez, Jimmy Ba, Maksims Volkovs"
+      url: "https://proceedings.mlr.press/v119/huang20f.html"
+- title: "Pre-training Transformers"
+  tag: "bert"
+  include: false
+  current: false
+  notes:
+    - title: "Neural Machine Translation of Rare Words with Subword Units"
+      author: "Rico Sennrich, Barry Haddow, Alexandra Birch"
+      url: "https://arxiv.org/abs/1508.07909"
