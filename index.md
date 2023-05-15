@@ -1,8 +1,8 @@
 ---
 layout: default
-img: C-3PO
-img_link: "http://en.wikipedia.org/wiki/Languages_in_Star_Wars"
-caption: "In Star Wars, C-3PO is fluent in over six million forms of communication."
+img: attention-matrix
+img_link: "https://en.wikipedia.org/wiki/Attention_(machine_learning)"
+caption: "Attention is all you need to pass this course."
 title: Course Information
 active_tab: main_page 
 ---
