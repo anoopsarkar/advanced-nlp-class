@@ -13,7 +13,7 @@
       title: "NLP Highlights podcast"
       url: "https://soundcloud.com/nlp-highlights"
       optional: true
-- title: "Cross Language Attention"
+- title: "Cross Attention"
   tag: cross_attention
   include: true
   current: false
@@ -22,7 +22,7 @@
       author: "Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio"
       url: "https://arxiv.org/abs/1409.0473"
     - title: "Lecture notes"
-      url: "assets/slides/bahdanau2015.pdf"
+      url: "assets/slides/cross_attention.pdf"
   links:
     - title: "Sequence to Sequence Learning with Neural Networks"
       author: "Ilya Sutskever, Oriol Vinyals, Quoc V. Le"
