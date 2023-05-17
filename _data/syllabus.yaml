@@ -38,6 +38,8 @@
     - title: "Attention is all you need"
       author: "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin"
       url: "https://arxiv.org/abs/1706.03762"
+    - title: "Lecture notes"
+      url: "assets/slides/self_attention.pdf"
   links:
     - title: "Convolutional Sequence to Sequence Learning"
       author: "Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, Yann N. Dauphin"
