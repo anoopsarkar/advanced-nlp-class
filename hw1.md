@@ -341,7 +341,7 @@ of the fine-tuned model:
 1. Improve the output layer handling using a CRF or a mini-Transformer classification head (more details below).
 1. Deal with misspellings in the dev and test data using adversarial training (more details below).
 
-## CRF Layer
+### CRF Layer
 
 A CRF layer can look at consistent labels (e.g. `I` tags always
 follow `B` tags for the same span, and other such consistencies)
@@ -390,7 +390,7 @@ Each time the pseudo-code uses $$[ v_{1} \ldots v_{T} ]$$ for some
 tensors $$v_{i}$$ it means you should use `torch.cat` to concatenate
 the vectors (you can use a for loop to compute each $$v_{i}$$).
 
-## Dealing with Misspellings
+### Dealing with Misspellings
 
 Look into adversarial training as explained in the following paper:
 
