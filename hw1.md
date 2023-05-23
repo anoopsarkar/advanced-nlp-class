@@ -367,8 +367,8 @@ Look into adversarial training as explained in the following paper:
 
 You must create the following files:
 
-* `answer/chunker.py` -- this is your solution to the homework. start by copying `default.py` as explained below.
-* `answer/chunker.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
+* `answer/bertchunker.py` -- this is your solution to the homework. start by copying `default.py` as explained below.
+* `answer/bertchunker.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
 
 ## Run your solution on the data files
 
@@ -406,7 +406,7 @@ to Coursys for evaluation.
 
 ### Create output.zip
 
-Once you have a working solution in `answer/chunker.py` create
+Once you have a working solution in `answer/bertchunker.py` create
 the `output.zip` for upload to Coursys using:
 
     python3 zipout.py
@@ -419,20 +419,19 @@ To create the `source.zip` file for upload to Coursys do:
 
 You must have the following files or `zipsrc.py` will complain about it:
 
-* `answer/chunker.py` -- this is your solution to the homework. start by copying `default.py` as explained below.
-* `answer/chunker.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
+* `answer/bertchunker.py` -- this is your solution to the homework. start by copying `default.py` as explained below.
+* `answer/bertchunker.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
 
 In addition, each group member should write down a short description of what they
 did for this homework in `answer/README.username`.
 
 ### Upload to Coursys
 
-Go to `Homework 3` on Coursys and do a group submission:
+Go to `Homework 1` on Coursys and do a group submission:
 
 * Upload `output.zip` and `source.zip`
-* Make sure your `source.zip` matches your Gitlab repository.
-* Make sure you have documented your approach in `answer/chunker.ipynb`.
-* Make sure each member of your group has documented their contribution to this homework in `answer/README.username` where `username` is your CSIL/GitLab username.
+* Make sure you have documented your approach in `answer/bertchunker.ipynb`.
+* Make sure each member of your group has documented their contribution to this homework in the Python notebook.
 
 ## Grading
 
@@ -441,10 +440,9 @@ The grading is split up into the following components:
 * dev scores (see Table below)
 * test scores (see Table below)
 * iPython notebook write-up 
-   * Make sure that you are not using any external data sources in your solution. You must only use the provided word vector file.
-   * Make sure you have implemented the semi-character RNN model yourself.
-   * Do **not** change the hyperparameters for the phrasal chunker in `default.py` in the solution to the robust chunking problem.
-* Check if each group member has a `answer/README.username`.
+   * Make sure that you are not using any external data sources in your solution.
+   * Make sure you have implemented the fine-tuning model improvements yourself without using external libraries.
+* Check if each group member has written about what they did in the Python notebook.
 
 Your F-score should be equal to or greater than the score listed for the corresponding marks.
 
