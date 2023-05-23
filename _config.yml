@@ -5,7 +5,7 @@ coursys: "https://coursys.sfu.ca/2023su-cmpt-983-x1/"
 semcode: 1234
 calendar: "https://calendar.google.com/calendar/ical/qgs97od9ef8t1582k2rqomv5ho%40group.calendar.google.com/public/basic.ics"
 lastday: "Aug 4, 2023"
-midterm: "TBD"
+midterm: "NA"
 instructor: anoop
 tas:
   - name: "Hassan Shavarani"
