@@ -493,12 +493,12 @@ Your F-score should be equal to or greater than the score listed for the corresp
 
 | **Score(dev)** | **Score(test)** | **Marks** | **Grade** |
 | Nan  | Nan  | 0   | F  |
-| 73   | 68   | 55  | D  |
-| 77   | 70   | 60  | C- |
-| 78   | 71   | 65  | C  |
-| 79   | 72   | 70  | C+ |
-| 80   | 73   | 75  | B- |
-| 81   | 74   | 80  | B  |
+| 77   | 70   | 55  | D  |
+| 78   | 71   | 60  | C- |
+| 79   | 72   | 65  | C  |
+| 80   | 73   | 70  | C+ |
+| 81   | 74   | 75  | B- |
+| 82   | 75   | 80  | B  |
 | 84   | 76   | 85  | B+ |
 | 86   | 79   | 90  | A- |
 | 90   | 82   | 95  | A  |
