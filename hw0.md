@@ -22,6 +22,7 @@ to the homework submission and the final project.
 Along with your group members, register yourself as part of a group on [Coursys]({{ site.coursys }}).
 
 Create a memorable name for your group. If you need help, [seek help](https://www.wordlab.com/name-generators/team-name-generator/).
+Make sure there is no whitespace in your group name or anything that might cause a mojibake (please use plain ascii).
 
 Go to the [Course Discussion Page]({{ site.coursys }}/forum) and select `[Activity Digest]`.
 Change the `Digest Email Frequency:` to a setting that send you email notifications, like so:
