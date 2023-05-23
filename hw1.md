@@ -389,7 +389,10 @@ which includes a CRF layer that you can add to `default.py` assuming
 
 Each time the pseudo-code uses $$[ v_{1} \ldots v_{T} ]$$ for some
 tensors $$v_{i}$$ it means you should use `torch.cat` to concatenate
-the vectors (you can use a for loop to compute each $$v_{i}$$).
+the vectors (you can create an array and append to it for each $$v_{i}$$).
+For the corner case of $$C_{b,0}$$ which is the first token in
+the sentence for each $$b$$ in the batch you can use $$C_{b,n}$$
+as the previous time step since $$C_{b,-1}$$ doesn't exist.
 
 The paper that introduced the use of a CRF layer in neural networks is:
 
