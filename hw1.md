@@ -191,7 +191,7 @@ will take about 15-20 minutes.
 
 You can either download the `chunker.pt` model file from:
 
-    https://drive.google.com/file/d/1Cob8vewgpvNhJ2KnZlYq2Tntkgc0l2yx/view
+https://drive.google.com/file/d/1Cob8vewgpvNhJ2KnZlYq2Tntkgc0l2yx/view
 
 Please do not commit the file into your git repository as it is
 moderately large and you can go over your disk quota. 
