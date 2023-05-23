@@ -351,9 +351,9 @@ comments in the code).
 
 1. Calculate the model prediction probability distributions (`p`) for each subword in the encoded `sentence_input` as the result of applying `softmax` to the prediction scores (`tag_space`).
 1. Create a list (let's call it `R`) which will contain normalized label prediction probabilities.
-1. For each index of the `sentence_input` sequence, i in (0, 1, 2, ..., `sentence_input` subword length - 1):
-    - Find the model prediction probability distribution in position i (`p_i`).
-    - Find the transition probability c_{i-1} from the prediction of the previous step (calculated as argmax(`p_{i-1`})) into any label for step i (you can consider a special row of `C` (e.g. the last row) to reflect on the initial transition probability in which we don't have any previous steps). Make sure c_{i-1} is a valid probability distribution using `softmax`.
+1. For each index of the `sentence_input` sequence, `i` in (0, 1, 2, ..., `sentence_input subword length` - 1):
+    - Find the model prediction probability distribution in position `i` (`p_i`).
+    - Find the transition probability `c_{i-1}` from the prediction of the previous step (calculated as argmax(`p_{i-1`})) into any label for step `i` (you can consider a special row of `C` (e.g. the last row) for the initial transition probability in which we don't have any previous steps). Make sure `c_{i-1}` is a valid probability distribution using `softmax`.
     - append `(p_i+c_{i-1})/2` to `R`.
 1. Convert `R` into a tensor and return its `log` as the result of the `forward` function call.
 
