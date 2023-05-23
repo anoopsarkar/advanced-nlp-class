@@ -355,17 +355,19 @@ we define a score for the output sequence of labels to be:
 
 The log probability we want to compute is:
 
-<p>$$\textit{log} g(\mathbf{y} | \mathbf{x}) =  \textit{log} \textit{softmax} \textit{score}(\mathbf{x}, \mathbf{y})$$</p>
+<p>$$\textit{log}(g(\mathbf{y} | \mathbf{x})) =  \textit{log}(\textit{softmax}_{\mathbf{x}}(\textit{score}(\mathbf{x}, \mathbf{y})))$$</p>
 
 where $$C(y_{i-1},y_{i})$$ (or $$C_{i-1}$$ for short) is the
 transition probability from the labels in the previous time step
 to the labels in the current time step $$i$$ and $$P_{i,y_{i}}$$
-(or $$p_(y_{i})$$ for one position and $$p(\mathbf{y})$$ for the
+(or $$p(y_{i})$$ for one position and $$p(\mathbf{y})$$ for the
 entire sequence)  is the probability of producing label $$y_{i}$$
-at time step $$i$$.
+at time step $$i$$. The `softmax` over the sequence $$\mathbf{x}$$
+is computed using `tag_space` from `default.py` as follows:
+`softmax(tag_space, dim=-1)`.
 
 Let $$n$$ be the length of the sentence aka ``tag_scores.size(1)``,
-$$B$$ be the batch size aka ``tag_scores.size(0)``, $$c_{i-1}$$ be
+$$B$$ be the batch size aka ``tag_scores.size(0)``, $$C_{i-1}$$ be
 the new variable to store the probability distribution over pairs
 of labels (commented out, but called `crf_layer` in `default.py`).
 
@@ -379,10 +381,14 @@ which includes a CRF layer that you can add to `default.py` assuming
 `tag_space` is computed as before (also see the comments in the code).
 
 1. For $$b$$ in $$B$$ and $$i$$ in $$n$$
-   1. $$C_{b,i-1} = C(y_{b,i-1})$$ (you will need to use `unsqueeze(0)` here to create a tensor that can be used to concatenate for all $$b$$ values)
-   1. $$C_{i-1} = \textit{softmax}([ C_{1,i-1}, \ldots, C_{B,i-1} ])$$
-   1. $$g_{i} = C_{i-1} + p_(y_{i})$$
-1. return $$g = \textit{log}([ g_{0}, \ldots, g_{n} ])$$ (here the concatenation happens for `dim=1` which is the sentence length)
+   1. $$C_{b,i-1} = C(y_{b,i-1})$$ (you will need to use `unsqueeze(0)` here to create a tensor that can be used to concatenate for all $$b$$ values).
+   1. $$C_{i-1} = \textit{softmax}([ C_{1,i-1}, \ldots, C_{B,i-1} ])$$ (you will need to use `unsqueeze(0)` here as well).
+   1. $$g_{i} = C_{i-1} + p(y_{i})$$ which computes $$\textit{softmax}(\textit{score}(\mathbf{x}, \mathbf{y}))$$ for the entire batch and $$p(y_{i})$$ is given by `tag_scores[:, i, :]`.
+1. return $$g = \textit{log}([ g_{0}, \ldots, g_{n} ])$$ (here the concatenation happens for `dim=1` which is the sentence length).
+
+Each time the pseudo-code uses $$[ v_{1} \ldots v_{T} ]$$ for some
+tensors $$v_{i}$$ it means you should use `torch.cat` to concatenate
+the vectors (you can use a for loop to compute each $$v_{i}$$).
 
 ## Dealing with Misspellings
 
