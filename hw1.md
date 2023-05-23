@@ -343,9 +343,9 @@ of the fine-tuned model:
 
 ### CRF Layer
 
-A CRF layer can look at consistent labels (e.g. `I` tags always
-follow `B` tags for the same span, and other such consistencies)
-and produce more coherent label sequences. 
+A Conditional Random Field (CRF) layer can look at consistent labels
+(e.g. `I` tags always follow `B` tags for the same span, and other
+such consistencies) and produce more coherent label sequences.
 
 For an input sequence $$\mathbf{x} = (x_{1}, \ldots, x_{n})$$ and a sequence
 of predictions for the output labels $$\mathbf{y} = (y_{1}, \ldots, y_{n})$$
@@ -364,7 +364,8 @@ to the labels in the current time step $$i$$ and $$P_{i,y_{i}}$$
 entire sequence)  is the probability of producing label $$y_{i}$$
 at time step $$i$$. The `softmax` over the sequence $$\mathbf{x}$$
 is computed using `tag_space` from `default.py` as follows:
-`softmax(tag_space, dim=-1)`.
+`tag_scores = softmax(tag_space, dim=-1)` (compare with how
+`tag_scores` is computed in `default.py`).
 
 Let $$n$$ be the length of the sentence aka ``tag_scores.size(1)``,
 $$B$$ be the batch size aka ``tag_scores.size(0)``, $$C_{i-1}$$ be
@@ -389,6 +390,14 @@ which includes a CRF layer that you can add to `default.py` assuming
 Each time the pseudo-code uses $$[ v_{1} \ldots v_{T} ]$$ for some
 tensors $$v_{i}$$ it means you should use `torch.cat` to concatenate
 the vectors (you can use a for loop to compute each $$v_{i}$$).
+
+The paper that introduced the use of a CRF layer in neural networks is:
+
+> [Neural Architectures for Named Entity Recognition](https://arxiv.org/abs/1603.01360). Guillaume Lample, Miguel Ballesteros, Sandeep Subramanian, Kazuya Kawakami, Chris Dyer. NAACL 2016.
+
+Based on the original CRF paper (which you don't really need to dive into but linked here for completeness):
+
+> [Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data](https://dl.acm.org/doi/10.5555/645530.655813). John Lafferty, Andrew McCallum, Fernando Pereira. ICML 2001.
 
 ### Dealing with Misspellings
 
