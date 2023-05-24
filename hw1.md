@@ -321,7 +321,7 @@ section below. With substantial computational resources and using
 large pre-trained models (which are beyond the scope of this homework)
 the [state of the art accuracy on this
 dataset](https://nlpprogress.com/english/shallow_syntax.html) has
-reached an F1-score above 97.5 percent (typically by using more 
+reached an F1-score above 97 percent (typically by using more 
 information than just the training data available for this
 task).
 
@@ -340,6 +340,11 @@ of the fine-tuned model:
 1. Use two different optimizers with different learning rates for the pre-trained encoder layers and the classification head layer.
 1. Improve the output layer handling using a CRF or a mini-Transformer classification head (more details below).
 1. Deal with misspellings in the dev and test data using adversarial training (more details below).
+1. Use more than the last layer of the Transformer since lower layers of a pre-trained LLM tend to reflect "syntax" while higher levels tend to reflect "semantics" (waving hands profusely).
+
+You only need to try one or two of these ideas to improve your model
+for this homework. Just the dual optimizers and the CRF layer should
+be enough to get an F-score of 94 on the dev set.
 
 ### CRF Layer
 
@@ -368,9 +373,10 @@ is computed using `tag_space` from `default.py` as follows:
 `tag_scores` is computed in `default.py`).
 
 Let $$n$$ be the length of the sentence aka ``tag_scores.size(1)``,
-$$B$$ be the batch size aka ``tag_scores.size(0)``, $$C_{i-1}$$ be
-the new variable to store the probability distribution over pairs
-of labels (commented out, but called `crf_layer` in `default.py`).
+$$B$$ be the batch size aka ``tag_scores.size(0)``, `tagset_size`
+is the same as ``tag_scores.size(3)``, and let $$C_{i-1}$$ be the
+new variable to store the probability distribution over pairs of
+labels (commented out, but called `crf_layer` in `default.py`).
 
 You can compute $$\mathbf{y}$$ by calling `tag_scores.argmax(-1)`.
 Note that because of batching it has two subscripts $$y_{b,i}$$
@@ -387,12 +393,13 @@ which includes a CRF layer that you can add to `default.py` assuming
    1. $$g_{i} = C_{i-1} + p(y_{i})$$ which computes $$\textit{softmax}(\textit{score}(\mathbf{x}, \mathbf{y}))$$ for the entire batch and $$p(y_{i})$$ is given by `tag_scores[:, i, :]`.
 1. return $$g = \textit{log}([ g_{0}, \ldots, g_{n} ])$$ (here the concatenation happens for `dim=1` which is the sentence length).
 
-Each time the pseudo-code uses $$[ v_{1} \ldots v_{T} ]$$ for some
+Each time the pseudo-code uses $$[ v_{1} \ldots v_{q} ]$$ for some
 tensors $$v_{i}$$ it means you should use `torch.cat` to concatenate
-the vectors (you can create an array and append to it for each $$v_{i}$$).
-For the corner case of $$C_{b,0}$$ which is the first token in
-the sentence for each $$b$$ in the batch you can use $$C_{b,n}$$
-as the previous time step since $$C_{b,-1}$$ doesn't exist.
+the vectors. You can create an array and append to it for each
+$$v_{i}$$ and call `torch.cat` on that array.  For the corner case
+of $$C_{b,0}$$ which is the first token in the sentence for each
+$$b$$ in the batch you can use $$C_{b,n}$$ as the previous time
+step since $$C_{b,-1}$$ doesn't exist.
 
 The paper that introduced the use of a CRF layer in neural networks is:
 
