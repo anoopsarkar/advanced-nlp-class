@@ -339,7 +339,7 @@ of the fine-tuned model:
 1. Use two different optimizers with different learning rates for the pre-trained encoder layers and the classification head layer. For instance, the classification head parameters might be better learned with an SGD optimizer and a learning rate of $$0.1$$.
 1. Improve the classification head using either:
     1. multi-layer perceptron (MLP)
-    1. CRF (more details below)
+    1. CRF
     1. mini-Transformer.
 
 You only need to try one or two of these ideas to improve your model
@@ -358,6 +358,18 @@ explained in the following paper:
 
 > [Combating Adversarial Misspellings with Robust Word Recognition](https://www.aclweb.org/anthology/P19-1561/). Danish Pruthi, Bhuwan Dhingra, Zachary C. Lipton. ACL 2019.
 
+### Improving the classification head
+
+The classification head in `default.py` is a single linear layer. You could experiment with more expressive feed-forward networks like the following model. 
+
+        FFN(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (lin1): Linear(in_features=768, out_features=3072, bias=True)
+            (lin2): Linear(in_features=3072, out_features=768, bias=True)
+            (classification_head): Linear(in_features=768, out_features=22, bias=True)
+        )
+
+You can experiment with `lin1` having more parameters than the input or fewer parameters.
 
 ### CRF Layer
 
