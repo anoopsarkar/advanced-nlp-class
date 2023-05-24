@@ -501,15 +501,15 @@ Your F-score should be equal to or greater than the score listed for the corresp
 | **Score(dev)** | **Score(test)** | **Marks** | **Grade** |
 | Nan  | Nan  | 0   | F  |
 | 90   | 82   | 55  | D  |
-| 90.5 | 82.5 | 60  | C- |
-| 91   | 83   | 65  | C  |
-| 91.5 | 83.5 | 70  | C+ |
-| 92   | 84   | 75  | B- |
-| 92.5 | 84.5 | 80  | B  |
-| 93   | 85   | 85  | B+ |
-| 93.5 | 85.5 | 90  | A- |
-| 94   | 86   | 95  | A  |
-| 95   | 87   | 100 | A+ |
+| 90.5 | 83   | 60  | C- |
+| 91   | 84   | 65  | C  |
+| 91.5 | 85   | 70  | C+ |
+| 92   | 86   | 75  | B- |
+| 92.5 | 87   | 80  | B  |
+| 93   | 88   | 85  | B+ |
+| 93.5 | 90   | 90  | A- |
+| 94   | 92   | 95  | A  |
+| 96   | 95   | 100 | A+ |
 {: .table}
 
 The score will be normalized to the marks on Coursys for the dev and test scores.
