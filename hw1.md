@@ -189,9 +189,9 @@ in the data directory. If it does not find this file it
 will start training on the `data/train.txt.gz` file. This
 will take about 15-20 minutes.
 
-You can either download the `chunker.pt` model file from:
-
-https://drive.google.com/file/d/1Cob8vewgpvNhJ2KnZlYq2Tntkgc0l2yx/view
+You can also download the [`chunker.pt` model
+file](https://drive.google.com/file/d/1Cob8vewgpvNhJ2KnZlYq2Tntkgc0l2yx/view)
+that was trained using `default.py`.
 
 Please do not commit the file into your git repository as it is
 moderately large and you can go over your disk quota. 
@@ -206,21 +206,19 @@ And then you can check the score on the dev output file called `output.txt` by r
 
 which produces the following detailed evaluation:
 
-    processed 23663 tokens with 11896 phrases; found: 13226 phrases; correct: 9689.
-    accuracy:  87.04%; (non-O)
-    accuracy:  87.45%; precision:  73.26%; recall:  81.45%; FB1:  77.14
-                 ADJP: precision:  13.32%; recall:  53.98%; FB1:  21.37  916
-                 ADVP: precision:  31.16%; recall:  58.79%; FB1:  40.73  751
-                CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  8
-                 INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  11
-                  LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  3
-                   NP: precision:  80.58%; recall:  80.86%; FB1:  80.72  6258
-                   PP: precision:  95.97%; recall:  86.93%; FB1:  91.23  2211
-                  PRT: precision:  22.15%; recall:  77.78%; FB1:  34.48  158
-                 SBAR: precision:  36.12%; recall:  80.17%; FB1:  49.80  526
-                  UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  64
-                   VP: precision:  83.75%; recall:  84.33%; FB1:  84.04  2320
-    (73.25722062603963, 81.44754539340954, 77.13557837751772)
+    processed 23663 tokens with 11896 phrases; found: 11847 phrases; correct: 10764.
+    accuracy:  94.01%; (non-O)
+    accuracy:  94.37%; precision:  90.86%; recall:  90.48%; FB1:  90.67
+                 ADJP: precision:  79.29%; recall:  69.47%; FB1:  74.06  198
+                 ADVP: precision:  74.25%; recall:  74.62%; FB1:  74.44  400
+                CONJP: precision:  66.67%; recall:  85.71%; FB1:  75.00  9
+                 INTJ: precision: 100.00%; recall: 100.00%; FB1: 100.00  1
+                   NP: precision:  90.22%; recall:  91.57%; FB1:  90.89  6330
+                   PP: precision:  96.80%; recall:  94.31%; FB1:  95.54  2378
+                  PRT: precision:  80.56%; recall:  64.44%; FB1:  71.60  36
+                 SBAR: precision:  92.27%; recall:  75.53%; FB1:  83.06  194
+                   VP: precision:  90.48%; recall:  90.36%; FB1:  90.42  2301
+    (90.85844517599392, 90.48419636852724, 90.67093459124794)
 
 For this homework we will be scoring your solution based on the FB1 score
 which is described in detail in the Accuracy section below. However the FB1
@@ -500,15 +498,15 @@ Your F-score should be equal to or greater than the score listed for the corresp
 
 | **Score(dev)** | **Score(test)** | **Marks** | **Grade** |
 | Nan  | Nan  | 0   | F  |
-| 90   | 81   | 55  | D  |
-| 90.5 | 81.5 | 60  | C- |
-| 91   | 82   | 65  | C  |
-| 91.5 | 82.5 | 70  | C+ |
-| 92   | 83   | 75  | B- |
-| 92.5 | 83.5 | 80  | B  |
-| 93   | 84   | 85  | B+ |
-| 93.5 | 84.5 | 90  | A- |
-| 94   | 85   | 95  | A  |
+| 90   | 82   | 55  | D  |
+| 90.5 | 82.5 | 60  | C- |
+| 91   | 83   | 65  | C  |
+| 91.5 | 83.5 | 70  | C+ |
+| 92   | 84   | 75  | B- |
+| 92.5 | 84.5 | 80  | B  |
+| 93   | 85   | 85  | B+ |
+| 93.5 | 85.5 | 90  | A- |
+| 94   | 86   | 95  | A  |
 | 95   | 87   | 100 | A+ |
 {: .table}
 
