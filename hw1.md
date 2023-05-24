@@ -334,17 +334,30 @@ above).
 Here are some specific things you can try to improve the accuracy
 of the fine-tuned model:
 
+1. Deal with misspellings in the dev and test data using adversarial training (more details below).
+1. Use more than the last layer of the Transformer since lower layers of a pre-trained LLM tend to reflect "syntax" while higher levels tend to reflect "semantics" (waving hands profusely).
 1. Use two different optimizers with different learning rates for the pre-trained encoder layers and the classification head layer. For instance, the classification head parameters might be better learned with an SGD optimizer and a learning rate of $$0.1$$.
 1. Improve the classification head using either:
     1. multi-layer perceptron (MLP)
     1. CRF (more details below)
     1. mini-Transformer.
-1. Deal with misspellings in the dev and test data using adversarial training (more details below).
-1. Use more than the last layer of the Transformer since lower layers of a pre-trained LLM tend to reflect "syntax" while higher levels tend to reflect "semantics" (waving hands profusely).
 
 You only need to try one or two of these ideas to improve your model
-for this homework. Just the dual optimizers and the CRF layer should
-be enough to get an F-score of 94 on the dev set.
+for this homework. Dealing with misspellings should be sufficient to
+get an F-score of higher than 94 on the dev set.
+
+### Dealing with Misspellings
+
+A very simple idea for dealing with the misspellings in the dev and
+test data is to realize that the training data is not similarly
+noisy. Augmenting the training data with additional noisy examples
+can help the model handle misspellings at inference time.
+
+For more advanced approach, look into adversarial training as
+explained in the following paper:
+
+> [Combating Adversarial Misspellings with Robust Word Recognition](https://www.aclweb.org/anthology/P19-1561/). Danish Pruthi, Bhuwan Dhingra, Zachary C. Lipton. ACL 2019.
+
 
 ### CRF Layer
 
@@ -409,11 +422,14 @@ Based on the original CRF paper (which you don't really need to dive into but li
 
 > [Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data](https://dl.acm.org/doi/10.5555/645530.655813). John Lafferty, Andrew McCallum, Fernando Pereira. ICML 2001.
 
-### Dealing with Misspellings
-
-Look into adversarial training as explained in the following paper:
-
-> [Combating Adversarial Misspellings with Robust Word Recognition](https://www.aclweb.org/anthology/P19-1561/). Danish Pruthi, Bhuwan Dhingra, Zachary C. Lipton. ACL 2019.
+**Some caveats**: Implementing a CRF layer is a good exercise since
+it is complicated to implement and will teach you a lot of PyTorch.
+However, while many state of the art (SOTA) implementations use a
+CRF layer, the representation power of a CRF layer is likely
+superseded by the representations learned using self-attention
+already in the BERT encoder. Instead of using a CRF layer, it might
+be easier and more accurate to use multi-head self attention in the
+classification head.
 
 ## Required files
 
