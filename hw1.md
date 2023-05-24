@@ -335,7 +335,10 @@ Here are some specific things you can try to improve the accuracy
 of the fine-tuned model:
 
 1. Use two different optimizers with different learning rates for the pre-trained encoder layers and the classification head layer. For instance, the classification head parameters might be better learned with an SGD optimizer and a learning rate of $$0.1$$.
-1. Improve the classification head using a CRF or a mini-Transformer (more details below).
+1. Improve the classification head using either:
+    1. multi-layer perceptron (MLP)
+    1. CRF (more details below)
+    1. mini-Transformer.
 1. Deal with misspellings in the dev and test data using adversarial training (more details below).
 1. Use more than the last layer of the Transformer since lower layers of a pre-trained LLM tend to reflect "syntax" while higher levels tend to reflect "semantics" (waving hands profusely).
 
