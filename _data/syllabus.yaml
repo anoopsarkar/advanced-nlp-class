@@ -77,3 +77,4 @@
     - title: "Neural Machine Translation of Rare Words with Subword Units"
       author: "Rico Sennrich, Barry Haddow, Alexandra Birch"
       url: "https://arxiv.org/abs/1508.07909"
+      download: "assets/notebooks/bpe.ipynb"
