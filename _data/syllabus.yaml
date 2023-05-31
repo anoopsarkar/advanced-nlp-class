@@ -33,7 +33,7 @@
 - title: "Self Attention"
   tag: self_attention
   include: true
-  current: true
+  current: false
   notes:
     - title: "Attention is all you need"
       author: "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin"
@@ -68,13 +68,38 @@
 - title: "Pre-training Transformers"
   tag: "bert"
   include: true
-  current: false
+  current: true
   notes:
     - title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
       author: "Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova"
       url: "https://arxiv.org/abs/1810.04805"
+    - title: "Improving language understanding with unsupervised learning"
+      author: "Alec Radford, Karthik Narasimhan, Tim Salimans, Ilya Sutskever"
+      url: "https://openai.com/research/language-unsupervised"
+    - title: Lecture notes
+      url: "assets/slides/pre_training.pdf"
   links:
-    - title: "Neural Machine Translation of Rare Words with Subword Units"
-      author: "Rico Sennrich, Barry Haddow, Alexandra Birch"
-      url: "https://arxiv.org/abs/1508.07909"
-      download: "assets/notebooks/bpe.ipynb"
+    - title: "Semi-supervised Sequence Learning"
+      author: "Andrew M. Dai, Quoc V. Le"
+      url: "https://arxiv.org/abs/1511.01432"
+    - title: "Deep contextualized word representations"
+      author: "Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, Luke Zettlemoyer"
+      url: "https://arxiv.org/abs/1802.05365"
+- title: "Parameter-efficient Fine Tuning"
+  tag: "peft"
+  include: true
+  current: false
+  notes:
+    - title: "Prefix-Tuning: Optimizing Continuous Prompts for Generation"
+      author: "Xiang Lisa Li, Percy Liang"
+      url: "https://arxiv.org/abs/2101.00190"
+    - title: "AdaMix: Mixture-of-Adaptations for Parameter-efficient Model Tuning"
+      author: "Yaqing Wang, Sahaj Agarwal, Subhabrata Mukherjee, Xiaodong Liu, Jing Gao, Ahmed Hassan Awadallah, Jianfeng Gao"
+      url: "https://arxiv.org/abs/2205.12410"
+    - title: "Adapter methods"
+      author: "docs.adapterhub.ml"
+      url: "https://docs.adapterhub.ml/overview.html"
+  links:
+    - title: "AdapterHub: A Framework for Adapting Transformers"
+      author: "Jonas Pfeiffer, Andreas Rücklé, Clifton Poth, Aishwarya Kamath, Ivan Vulić, Sebastian Ruder, Kyunghyun Cho, Iryna Gurevych"
+      url: "https://aclanthology.org/2020.emnlp-demos.7/"
