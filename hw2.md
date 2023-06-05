@@ -125,74 +125,17 @@ zero marks.
 
 ### The default model
 
-The model used in `answer/default.py` is a BERT-based Transformer
-model that is fine-tuned to predict the phrase chunking tags 
-for each (sub-word) token. It is trained on the data provided
-in `data/train.txt.gz` which has the ground truth phrase tags
-for each token and these sentences are used to fine-tune the
-BERT model.
-
-The model structure can be examined using the following code,
-assuming that you are in the `nlp-class-hw/prefixtune` directory or
-if you have the `data` directory in your current directory with the
-training data and the model file:
-
-    from default import *
-    prefixtune = FinetuneTagger('data/prefixtune', '.pt', 'distilbert-base-uncased')
-    print(prefixtune.model_str())
-
-This prints out the model:
-
-    TransformerModel(
-      (encoder): DistilBertModel(
-        (embeddings): Embeddings(
-          (word_embeddings): Embedding(30522, 768, padding_idx=0)
-          (position_embeddings): Embedding(512, 768)
-          (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-          (dropout): Dropout(p=0.1, inplace=False)
-        )
-        (transformer): Transformer(
-          (layer): ModuleList(
-            (0-5): 6 x TransformerBlock(
-              (attention): MultiHeadSelfAttention(
-                (dropout): Dropout(p=0.1, inplace=False)
-                (q_lin): Linear(in_features=768, out_features=768, bias=True)
-                (k_lin): Linear(in_features=768, out_features=768, bias=True)
-                (v_lin): Linear(in_features=768, out_features=768, bias=True)
-                (out_lin): Linear(in_features=768, out_features=768, bias=True)
-              )
-              (sa_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (ffn): FFN(
-                (dropout): Dropout(p=0.1, inplace=False)
-                (lin1): Linear(in_features=768, out_features=3072, bias=True)
-                (lin2): Linear(in_features=3072, out_features=768, bias=True)
-                (activation): GELUActivation()
-              )
-              (output_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-            )
-          )
-        )
-      )
-      (classification_head): Linear(in_features=768, out_features=22, bias=True)
-    )
-
-Optimizing the above parameters to find the minimum loss on the
-training data by gradient descent is done automatically using Pytorch
-API calls in `answer/default.py`.
 
 ### Hyperparameters
 
-For this homework we will enforce that the base BERT model should not
-be changed. Use `distilbert-base-uncased` as your base BERT model.
-You can change the fine-tuning model and parameters as you wish.
 
 ### Pytorch
 
-You will need to use some Pytorch API calls to solve this homework.
-We do not expect you to already know Pytorch in great detail.
-The following links will help you get started but you can learn
-a lot of the Pytorch basics by understanding `default.py` and
-the process of solving this homework.
+You will need to use some Pytorch API calls and possibly the
+Huggingface Transformers package API to solve this homework. The
+following links will help you get started on what you need to know
+to get started. You can learn a lot of the Pytorch basics by
+understanding `default.py`.
 
 Some useful links if you feel lost at the beginning:
 
