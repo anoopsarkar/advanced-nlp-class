@@ -18,11 +18,11 @@
   include: true
   current: false
   notes:
+    - title: "Lecture notes"
+      url: "assets/slides/cross_attention.pdf"
     - title: "Neural Machine Translation by Jointly Learning to Align and Translate"
       author: "Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio"
       url: "https://arxiv.org/abs/1409.0473"
-    - title: "Lecture notes"
-      url: "assets/slides/cross_attention.pdf"
   links:
     - title: "Sequence to Sequence Learning with Neural Networks"
       author: "Ilya Sutskever, Oriol Vinyals, Quoc V. Le"
@@ -35,14 +35,14 @@
   include: true
   current: false
   notes:
+    - title: "Lecture notes"
+      url: "assets/slides/self_attention.pdf"
     - title: "Attention is all you need"
       author: "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin"
       url: "https://arxiv.org/abs/1706.03762"
     - title: "Transformer: A Novel Neural Network Architecture for Language Understanding"
       author: "posted by Jakob Uszkoreit"
       url: "https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html"
-    - title: "Lecture notes"
-      url: "assets/slides/self_attention.pdf"
     - title: "Stanford cs224n lecture notes on self attention"
       author: "John Hewitt"
       url: "https://web.stanford.edu/class/cs224n/readings/cs224n-self-attention-transformers-2023_draft.pdf"
@@ -70,14 +70,14 @@
   include: true
   current: true
   notes:
+    - title: Lecture notes
+      url: "assets/slides/pre_training.pdf"
     - title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
       author: "Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova"
       url: "https://arxiv.org/abs/1810.04805"
     - title: "Improving language understanding with unsupervised learning"
       author: "Alec Radford, Karthik Narasimhan, Tim Salimans, Ilya Sutskever"
       url: "https://openai.com/research/language-unsupervised"
-    - title: Lecture notes
-      url: "assets/slides/pre_training.pdf"
   links:
     - title: "Semi-supervised Sequence Learning"
       author: "Andrew M. Dai, Quoc V. Le"
@@ -85,11 +85,28 @@
     - title: "Deep contextualized word representations"
       author: "Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, Luke Zettlemoyer"
       url: "https://arxiv.org/abs/1802.05365"
+    - title: "RoBERTa: A Robustly Optimized BERT Pretraining Approach"
+      author: "Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, Veselin Stoyanov"
+      url: "https://arxiv.org/abs/1907.11692"
+    - title: "Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context"
+      author: "Zihang Dai, Zhilin Yang, Yiming Yang, Jaime Carbonell, Quoc V. Le, Ruslan Salakhutdinov"
+      url: "https://arxiv.org/abs/1901.02860"
+    - title: "ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators"
+      author: "Kevin Clark, Minh-Thang Luong, Quoc V. Le, Christopher D. Manning"
+      url: "https://arxiv.org/abs/2003.10555"
+    - title: "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+      author: "Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, Peter J. Liu"
+      url: "https://arxiv.org/abs/1910.10683"
+    - title: "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations"
+      author: "Zhenzhong Lan, Mingda Chen, Sebastian Goodman, Kevin Gimpel, Piyush Sharma, Radu Soricut"
+      url: "https://arxiv.org/abs/1909.11942"
 - title: "Parameter-efficient Fine Tuning"
   tag: "peft"
   include: true
   current: false
   notes:
+    - title: Lecture notes
+      url: "assets/slides/peft.pdf"
     - title: "Prefix-Tuning: Optimizing Continuous Prompts for Generation"
       author: "Xiang Lisa Li, Percy Liang"
       url: "https://arxiv.org/abs/2101.00190"
