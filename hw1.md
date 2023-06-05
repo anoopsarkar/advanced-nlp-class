@@ -3,7 +3,7 @@ layout: default
 img: bratconll2k
 img_link: "http://weaver.nlplab.org/~brat/demo/latest/#/not-editable/CoNLL-00-Chunking/train.txt-doc-1"
 caption: Explore phrasal chunking interactively using Brat
-title: Homework 3 | Robust Phrasal Chunking
+title: Homework 1 | BERT Finetuning for Robust Phrasal Chunking
 active_tab: homework
 ---
 
@@ -33,7 +33,7 @@ Note that the `USER` above is the SFU username of the person in
 your group that set up the GitLab repository.
 
 Then copy over the contents of the `bertchunker` directory into your
-`hw3` directory in your repository.
+`hw1` directory in your repository.
 
 Set up the virtual environment:
 
