@@ -51,17 +51,69 @@ command to get started with your development for the homework:
 
 ## Background
 
+The goal for this homework is to learn to use an autoregressive
+language model which processes the input from left to right and
+predicts the next token based on the left context (also called a
+causal language model when there is a distinct input and output but
+is trained and decoded as if it was a left to right LM).
+
+We will be using a text to table task, which takes structured data
+in the form of a table and produces a text description of what is
+in the data.
+
+For example, if the input is:
+
+| **name** | **area** | **family friendly** |
+| Alimentum  | city centre  | no |
+{: .table}
+
+The table is linearized and stored as follows:
+
+    name : Alimentum | area : city centre | family friendly : no
+
+This linearized table is given as input to a language model
+to produce a text description of the table:
+
+    There is a place in the city centre , Alimentum , that is not family - friendly .
+
+However, there can be many ways to produce a text description. Here are some of the
+ways you can produced a text for the same table:
+
+    There is a place in the city centre , Alimentum , that is not family - friendly .
+    In the city centre there is a venue name Alimentum , this is not a family - friendly venue .
+    Alimentum is not a family - friendly place , located in city centre .
+    Alimentum is not a family - friendly arena and is located in the city centre .
+    Alimentum is not a family - friendly place in the city centre .
+    Alimentum in city centre is not a family - friendly place .
+
+A large language model is trained on data from many diverse sources and there
+might be a mix of structured and unstructured data in the training data helping it
+to solve this task if you prompt the language model in the right way.
+
+The goal of this assignment is to fine-tune a language model (one
+that isn't exposed to the entire web) in a compute-efficient way
+using prefix tuning. The end result is that the parameters for the
+large language model are not even modified after fine-tuning and
+we only learn an appropriate (continuous) prompt that can solve
+this task using in-context learning.
 
 ## Data set
 
+The data set is the E2E table to text task as described in detail
+in the following publication:
+
+> [The E2E Dataset: New Challenges For End-to-End Generation](https://arxiv.org/abs/1706.09254). Jekaterina Novikova, Ondřej Dušek, Verena Rieser. SIGDIAL 2017 short paper.
+
+The [leaderboard](https://paperswithcode.com/sota/table-to-text-generation-on-e2e) for this task shows that there is still room for improvement on the state-of-the-art.
 
 ## Data files
 
 The data files provided are:
 
-* `data/train.txt.gz` -- the training data used to train the `answer/default.py` model
-* `data/input` -- input files `dev.txt` and `test.txt` infected with noise
+* `data/train.txt.gz` -- the training data used to train the `answer/default.py` model (`default.py` uses the [huggingface dataset for E2E](https://huggingface.co/datasets/e2e_nlg) to load the data but a copy of the training data is provided just in case).
+* `data/input` -- input files `dev.txt` and `test.txt` infected with noise. a subset of `dev.txt` is provided as `small.txt` for development of your solution.
 * `data/reference/dev.out` -- the reference output for the `dev.txt` input file
+* `data/reference/small.out` -- the reference output for the `dev.txt` input file
 
 ## Default solution
 
@@ -75,44 +127,32 @@ as your solution:
     python3 zipout.py
     python3 check.py
 
-The default solution will look for the file `prefixtune.pt`
-in the data directory. If it does not find this file it
-will start training on the `data/train.txt.gz` file. This
-will take about 15-20 minutes.
+The default solution will use the language model directly using a
+prompt to solve the task. `default.py` has additional code provided
+that will look for a fine-tuned model as `data/peft.pt` and use
+that for decoding if it exists. Otherwise, there is code in
+`default.py` that loads up the dataset for fine-tuning. You will
+need to copy and modify `default.py` to add your own fine-tuning
+steps to train a better model for this task.
 
-You can also download the [`prefixtune.pt` model
-file](https://drive.google.com/file/d/1Cob8vewgpvNhJ2KnZlYq2Tntkgc0l2yx/view)
-that was trained using `default.py`.
+Please do not commit your model file or the language model file
+into your git repository as it is moderately large and you can go
+over your disk quota.
 
-Please do not commit the file into your git repository as it is
-moderately large and you can go over your disk quota. 
+To run the default program as follows:
 
-If you have a `prefixtune.pt` in the `data` directory then you can simply run:
-
-    python3 answer/default.py > output.txt
+    python3 answer/default.py -i data/input/small.txt > output.txt
 
 And then you can check the score on the dev output file called `output.txt` by running:
 
-    python3 conlleval.py -o output.txt
+    python3 bleu.py -t data/reference/small.out -o output.txt
 
-which produces the following detailed evaluation:
+which produces the evaluation as a BLEU score:
 
-    processed 23663 tokens with 11896 phrases; found: 11847 phrases; correct: 10764.
-    accuracy:  94.01%; (non-O)
-    accuracy:  94.37%; precision:  90.86%; recall:  90.48%; FB1:  90.67
-                 ADJP: precision:  79.29%; recall:  69.47%; FB1:  74.06  198
-                 ADVP: precision:  74.25%; recall:  74.62%; FB1:  74.44  400
-                CONJP: precision:  66.67%; recall:  85.71%; FB1:  75.00  9
-                 INTJ: precision: 100.00%; recall: 100.00%; FB1: 100.00  1
-                   NP: precision:  90.22%; recall:  91.57%; FB1:  90.89  6330
-                   PP: precision:  96.80%; recall:  94.31%; FB1:  95.54  2378
-                  PRT: precision:  80.56%; recall:  64.44%; FB1:  71.60  36
-                 SBAR: precision:  92.27%; recall:  75.53%; FB1:  83.06  194
-                   VP: precision:  90.48%; recall:  90.36%; FB1:  90.42  2301
-    (90.85844517599392, 90.48419636852724, 90.67093459124794)
+    bleu score: 1.3688755959761818
 
-For this homework we will be scoring your solution based on the FB1 score
-which is described in detail in the Accuracy section below. However the FB1
+For this homework we will be scoring your solution based on the BLEU score
+which is described in detail in the Accuracy section below. However the BLEU
 score is not the only focus. You can focus on efficiency, model size, 
 experimental comparison with other approaches and many other choices.
 
@@ -122,12 +162,6 @@ command line options that exist in `answer/default.py`.
 
 Submitting the default solution without modification will get you
 zero marks.
-
-### The default model
-
-
-### Hyperparameters
-
 
 ### Pytorch
 
@@ -144,7 +178,35 @@ Some useful links if you feel lost at the beginning:
 
 Read the source code in `default.py` in detail.
 
-## Implementing the model
+## Prefix Tuning
+
+You will implement the approach presented in this paper to solve
+the table to text fine-tuning challenge:
+
+> [Prefix-Tuning: Optimizing Continuous Prompts for Generation](https://aclanthology.org/2021.acl-long.353). Xiang Lisa Li, Percy Liang. ACL 2021.
+
+### Hyperparameters
+
+`default.py` uses `distilgpt2` as the language model which is the
+smallest of the GPT2 models. You can alternatively use `gpt2` but
+you should not use `gpt2-large` or `gpt2-xl` or any of the massively
+large language models since they can be very slow even on a GPU.
+
+The other hyperparameters for prefix tuning are available by
+running:
+
+    python3 answer/default.py -h
+
+You can experiment with different values for the number of virtual
+tokens and the prefix projection boolean flag.  Although five virtual
+tokens seems to work the best when compared to the increased training
+time for more virtual tokens.
+
+Setting the prefix projection boolean to `True` will improve results
+but at the cost of more parameters (0.1 percent of original model
+will go up to 10 percent).
+
+Do not change any of the other hyperparameters.
 
 ## Required files
 
@@ -228,17 +290,17 @@ The grading is split up into the following components:
 Your BLEU score should be equal to or greater than the score listed for the corresponding marks.
 
 | **Score(dev)** | **Score(test)** | **Marks** | **Grade** |
-| Nan  | Nan  | 0   | F  |
-| 90.5 | 82   | 55  | D  |
-| 91   | 83   | 60  | C- |
-| 91.5 | 84   | 65  | C  |
-| 92   | 85   | 70  | C+ |
-| 92.5 | 86   | 75  | B- |
-| 93   | 87   | 80  | B  |
-| 93.5 | 88   | 85  | B+ |
-| 94   | 90   | 90  | A- |
-| 94.5 | 92   | 95  | A  |
-| 96   | 95   | 100 | A+ |
+| 0.0  | 0.0  | 0   | F  |
+| 16.9 | 21.6 | 55  | D  |
+| 17   | 23   | 60  | C- |
+| 18   | 24   | 65  | C  |
+| 19   | 25   | 70  | C+ |
+| 20   | 26   | 75  | B- |
+| 21   | 27   | 80  | B  |
+| 22   | 28   | 85  | B+ |
+| 23   | 29   | 90  | A- |
+| 24   | 30   | 95  | A  |
+| 30   | 35   | 100 | A+ |
 {: .table}
 
 The score will be normalized to the marks on Coursys for the dev and test scores.
