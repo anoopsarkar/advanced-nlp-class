@@ -291,7 +291,7 @@ Your BLEU score should be equal to or greater than the score listed for the corr
 
 | **Score(dev)** | **Score(test)** | **Marks** | **Grade** |
 | 0.0  | 0.0  | 0   | F  |
-| 1.3  | 2.1  | 55  | D  |
+| 1.3  | 1.2  | 55  | D  |
 | 10   | 12   | 60  | C- |
 | 15   | 17   | 65  | C  |
 | 17   | 20   | 70  | C+ |
