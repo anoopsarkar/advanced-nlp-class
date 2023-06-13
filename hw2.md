@@ -163,6 +163,44 @@ command line options that exist in `answer/default.py`.
 Submitting the default solution without modification will get you
 zero marks.
 
+### Accuracy
+
+The accuracy for this homework is calculated using the 
+[BLEU score](https://en.wikipedia.org/wiki/BLEU)
+which compares n-gram overlap between the candidate and the
+reference. It then combines that with a brevity penalty to make
+sure the candidate is approximately matching the length of the
+reference.
+
+- Reference: `The NASA Opportunity rover is battling a massive dust storm on Mars .`
+- Candidate: `A NASA rover is fighting a massive storm on Mars .`
+
+The candidate has 11 tokens (so 11 unigrams, 10 bigrams, 9 trigrams
+and 8 fourgrams). The following n-gram matches can be found:
+
+- Unigram: `A`, `NASA`, `rover`, `is`, `a`, `massive`, `storm`, `on`, `Mars`. Score = 9/11
+- Bigram: `rover is`, `a massive`, `storm on`, `on Mars`, `Mars .`. Score = 5/10
+- Trigram: `storm on Mars`, `on Mars .`. Score = 2/9
+- Fourgram: `storm on Mars .`. Score = 1/8
+
+In the BLEU score we actually use the minimum frequency of each n-gram based on
+reference versus candidate, e.g. if an n-gram occurs twice in the candidate, but
+only once in the reference then we take the numerator to be one.
+
+The overall n-gram precision score is a equally weighted geometric mean
+of each of the n-gram precision values.
+
+- Overall precision: (9/11 * 5/10 * 2/9 * 1/8)^(1/4) = 0.32649
+
+The brevity penalty is calculated as the minimum of 1 and exp(1 -
+reference-length/output-length). For the above example, the reference
+length is 13 and the candidate length is 11 so the brevity penalty
+is 0.8337.
+
+The BLEU score is the product of the overall precision score and the
+brevity penalty. For the above example, this would be 0.27221.
+
+
 ### Pytorch
 
 You will need to use some Pytorch API calls and possibly the
