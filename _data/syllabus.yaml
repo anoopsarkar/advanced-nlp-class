@@ -116,7 +116,7 @@
       url: "https://nlp.seas.harvard.edu/slides/emnlp16_seqkd.pdf"
     - title: "Dark Knowledge"
       author: "Geoffrey Hinton"
-      url: "https://www.ttic.edu/dl/dark14.pdf'
+      url: "https://www.ttic.edu/dl/dark14.pdf"
     - title: "DistilBERT"
       author: "Huggingface"
       url: "https://medium.com/huggingface/distilbert-8cf3380435b5"
