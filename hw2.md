@@ -244,7 +244,13 @@ Setting the prefix projection boolean to `True` will improve results
 but at the cost of more parameters (0.1 percent of original model
 will go up to 10 percent).
 
-Do not change any of the other hyperparameters.
+You can experiment with different parameters to the `model.generate()`
+function in `predict()` or even replace it altogether. Explore
+[useful parameters for the generate
+function](https://huggingface.co/blog/how-to-generate).
+
+Do not change any of the other hyperparameters unless you post
+on the discussion board and it is approved by the instructor.
 
 ## Required files
 
