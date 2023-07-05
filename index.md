@@ -71,7 +71,7 @@ At the end of this course, the student should:
 #### Asking for help
 * Use the web, [ChatGPT](https://chat.openai.com) and [Codex](https://platform.openai.com/docs/guides/code)
 * Ask for help on [the Coursys forum]({{ site.coursys }}/forum)
-* Instructor office hours: TBD
+* Instructor office hours: Thursdays, 9:30am on Zoom (link on discussion forum).
 * <b>No emails</b> to the TAs and only emails that cannot go to discussion board can be sent to the instructor
 * Use only SFU email address and use `cmpt419:` or `cmpt983:` (for ugrad and grad respectively) as subject prefix
 
