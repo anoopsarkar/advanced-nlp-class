@@ -2,7 +2,7 @@
 layout: default
 img: vae_signs
 img_link: "https://en.wikipedia.org/wiki/Autoencoder"
-caption: Datasets have also grown by orders of magnitude
+caption: Variational autoencoders can be used to sample outputs from a neural network
 title: Homework 4 | Variational Auto-Encoding for Sign Image Clustering
 active_tab: homework
 ---
