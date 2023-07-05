@@ -152,18 +152,18 @@ You can run the unmodified pre-trained model through the evaluation pipeline as 
 This will produce scores on the BLiMP task:
 
     Scores:
-    anaphor_agreement:	81.54%
-    argument_structure:	67.12%
-    binding:	67.26%
-    control_raising:	67.85%
-    determiner_noun_agreement:	90.75%
-    ellipsis:	76.44%
-    filler_gap:	63.48%
-    irregular_forms:	87.43%
-    island_effects:	39.87%
-    npi_licensing:	55.92%
-    quantifiers:	70.53%
-    subject_verb_agreement:	65.42%
+    anaphor_agreement:         81.54%
+    argument_structure:        67.12%
+    binding:                   67.26%
+    control_raising:           67.85%
+    determiner_noun_agreement: 90.75%
+    ellipsis:                  76.44%
+    filler_gap:                63.48%
+    irregular_forms:           87.43%
+    island_effects:            39.87%
+    npi_licensing:             55.92%
+    quantifiers:               70.53%
+    subject_verb_agreement:    65.42%
 
 It will also create the directories and files in:
 `babylm/roberta-base-strict-small/zeroshot/` for each of the BLiMP subtasks.
