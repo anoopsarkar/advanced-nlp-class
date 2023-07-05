@@ -33,7 +33,7 @@ Note that the `USER` above is the SFU username of the person in
 your group that set up the GitLab repository.
 
 Then copy over the contents of the `babylm` directory into your
-`hw2` directory in your repository.
+`hw3` directory in your repository.
 
 Set up the virtual environment:
 
@@ -122,8 +122,11 @@ when you clone the BabyLM github repository:
 On line 49 of the file `babylm_eval.py` change from `cuda` to `cpu`
 if you are going to run the evaluation without using a GPU. You
 might want to use your own GPU or the ones in CSIL or the free GPUs
-available on Google CoLab. Note that it takes about 6 hours to
-finish the zero-shot evaluation on the BLiMP data on a CPU.
+available on Google CoLab. Note that it takes between 4-6 hours to
+finish the zero-shot evaluation on the BLiMP data on a CPU. Speed
+can be improved easily to 30-60 mins by doing each section of BLiMP
+in parallel but that is not currently supported by the official
+evaluation pipeline.
 
 There is also a CoLab demo of the evaluation pipeline available here:
 
@@ -206,13 +209,38 @@ evaluation scores on the zero-shot task for the BabyLM challenge,
 which is the BLiMP evaluation.
 
     python3 zipout.py
+
+This should create an `output.zip` file from the evaluation
+scores computed by the `evaluation-pipeline`. This should be
+very quick since all the hard work was already done during
+the evaluation phase.
+
+Next you can check the overall score by running `check.py`:
+
     python3 check.py
+
+Which should return a macro-average accuracy score for 
+the entire BLiMP task (e.g.):
+
+    score: 75.0570 
 
 For this homework, it is acceptable to submit the evaluation scores
 produced by the provided pre-trained model, since this homework is
 to evaluate if you can get started on a project and run the evaluation
 pipeline to evaluate your project work on standard benchmark
 dataset(s).
+
+## The Challenge
+
+Since the BLiMP task involves various pairwise comparison tasks
+based on the language model score your best bet to improve the
+discriminative power of the language model to changes in
+the grammar of the sentence. Here are some ideas, but there
+are many equally good ideas you can come up with:
+
+* The classification task uses the `[CLS]` token (in RoBERTa this is actually `<s>`). So creating a fine-tuning task for the strict small model that allows it to discriminate between corrupted sentences (by replacing a content word like a verb, noun or adjective at random with another content word) and also allows it to recognize benign changes that do not make the sentence ungrammatical (replacing a content word with a synonym from Wordnet).
+* Use an ELECTRA model to train a discriminator that should do better on the BLiMP task.
+* Fine-tune the strict small model on the BLiMP data (this is technically cheating, but it would be interesting to see if fine-tuning helps). If fine-tuning on BLiMP helps, then try using an online LLM service to generate fine-tuning data for your small model to do better on the BLiMP task.
 
 ## Submit your homework on Coursys
 
@@ -251,8 +279,7 @@ Go to `Homework 3` on Coursys and do a group submission:
 
 The grading is split up into the following components:
 
-* dev scores (see Table below)
-* test scores (see Table below)
+* evaluation scores (see Table below)
 * iPython notebook write-up 
    * Make sure that you are not using any external data sources in your solution.
    * Make sure you have implemented the fine-tuning model improvements yourself without using external libraries.
@@ -273,5 +300,4 @@ Your score should be equal to or greater than the score listed for the correspon
 | 69  | 95  | A  |
 | 75  | 100 | A+ |
 {: .table}
-
 
