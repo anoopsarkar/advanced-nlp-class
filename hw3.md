@@ -2,7 +2,7 @@
 layout: default
 img: model_sizes
 img_link: "https://babylm.github.io"
-caption: Datasets have also grown by orders of magnitude
+caption: Datasets have grown by orders of magnitude remarkably quickly
 title: Homework 3 | BabyLM Challenge
 active_tab: homework
 ---
