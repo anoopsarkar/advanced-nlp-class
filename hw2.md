@@ -309,8 +309,7 @@ You must have the following files or `zipsrc.py` will complain about it:
 * `answer/prefixtune.py` -- this is your solution to the homework. start by copying `default.py` as explained below.
 * `answer/prefixtune.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
 
-In addition, each group member should write down a short description of what they
-did for this homework in `answer/README.username`.
+Each group member should write about what they did for this homework in the Python notebook.
 
 ### Upload to Coursys
 
