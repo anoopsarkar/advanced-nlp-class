@@ -242,6 +242,12 @@ are many equally good ideas you can come up with:
 * Use an ELECTRA model to train a discriminator that should do better on the BLiMP task.
 * Fine-tune the strict small model on the BLiMP data (this is technically cheating, but it would be interesting to see if fine-tuning helps). If fine-tuning on BLiMP helps, then try using an online LLM service to generate fine-tuning data for your small model to do better on the BLiMP task.
 
+One thing to keep in mind is that your first evaluation on the
+provided pre-trained model is going to be sufficient to get you a
+pretty good grade on this homework. If you want to aim for higher
+than that, you can pursue one of the above ideas or some of your
+own.
+
 ## Submit your homework on Coursys
 
 Once you are done with your homework submit all the relevant materials
