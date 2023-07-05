@@ -241,6 +241,7 @@ are many equally good ideas you can come up with:
 * The classification task uses the `[CLS]` token (in RoBERTa this is actually `<s>`). So creating a fine-tuning task for the strict small model that allows it to discriminate between corrupted sentences (by replacing a content word like a verb, noun or adjective at random with another content word) and also allows it to recognize benign changes that do not make the sentence ungrammatical (replacing a content word with a synonym from Wordnet).
 * Use an ELECTRA model to train a discriminator that should do better on the BLiMP task.
 * Fine-tune the strict small model on the BLiMP data (this is technically cheating, but it would be interesting to see if fine-tuning helps). If fine-tuning on BLiMP helps, then try using an online LLM service to generate fine-tuning data for your small model to do better on the BLiMP task.
+* Since the BLiMP task is about recognizing syntax errors it might help to read the background on each sub-task and tailor the fine-tuning for each sub-task differently for higher accuracy.
 
 One thing to keep in mind is that your first evaluation on the
 provided pre-trained model is going to be sufficient to get you a
