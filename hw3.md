@@ -39,15 +39,8 @@ Set up the virtual environment:
 
     python3.10 -m venv venv
     source venv/bin/activate
-    pip3 install -r requirements.txt
 
 You must use Python 3.10 (or later) for this homework.
-
-Note that if you do not change the requirements then after you have
-set up the virtual environment `venv` you can simply run the following
-command to get started with your development for the homework:
-
-    source venv/bin/activate
 
 ## Background
 
@@ -81,8 +74,11 @@ The dataset for training the language models are available from this URL:
 You should use only the data in the `babylm_data/babylm_10M` directory
 for this homework which contains the following files:
 
-    aochildes.train		cbt.train		gutenberg.train		qed.train		switchboard.train
-    bnc_spoken.train	children_stories.train	open_subtitles.train	simple_wikipedia.train	wikipedia.train
+    aochildes.train         cbt.train
+    gutenberg.train         qed.train
+    switchboard.train       bnc_spoken.train
+    children_stories.train  open_subtitles.train
+    simple_wikipedia.train  wikipedia.train
 
 A pre-trained language model which was trained on the `babylm_10M`
 data is available from this link:
@@ -115,9 +111,11 @@ evaluation. Make sure you are in the `nlp-class-hw/babylm` directory
 when you clone the BabyLM github repository:
 
     cd nlp-class-hw/babylm
+    source venv/bin/activate # see intro section
     git clone https://github.com/babylm/evaluation-pipeline
     cd evaluation-pipeline
     unzip filter_data.zip
+    pip install -U .
 
 On line 49 of the file `babylm_eval.py` change from `cuda` to `cpu`
 if you are going to run the evaluation without using a GPU. You
@@ -174,8 +172,10 @@ Make sure you have the following directory contents before running `zipout.py`:
 
 Should show you these files:
 
-    anaphor_agreement		binding				determiner_noun_agreement	filler_gap			island_effects			quantifiers
-    argument_structure		control_raising			ellipsis			irregular_forms			npi_licensing			subject_verb_agreement
+    anaphor_agreement   binding           determiner_noun_agreement
+    filler_gap          island_effects    quantifiers
+    argument_structure  control_raising   ellipsis
+    irregular_forms     npi_licensing     subject_verb_agreement
 
 The directory name `roberta-base-strict-small` could be different
 depending on your pre-trained language model name.
