@@ -210,3 +210,42 @@
    - title: "Generalization through Memorization: Nearest Neighbor Language Models"
      author: "Urvashi Khandelwal, Omer Levy, Dan Jurafsky, Luke Zettlemoyer, Mike Lewis"
      url: "https://openreview.net/forum?id=HklBjCEKvH"
+- title: "Fast Attention"
+  tag: "fastattn"
+  include: true
+  current: false
+  notes:
+   - title: "Reformer: The Efficient Transformer"
+     author: "Nikita Kitaev, Lukasz Kaiser, Anselm Levskaya"
+     url: "https://openreview.net/forum?id=rkgNKkHtvB"
+   - title: "Rethinking Attention with Performers"
+     author: "Krzysztof Marcin Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Quincy Davis, Afroz Mohiuddin, Lukasz Kaiser, David Benjamin Belanger, Lucy J Colwell, Adrian Weller"
+     url: "https://openreview.net/forum?id=Ua6zuk0WRH"
+- title: "Data Efficiency"
+  tag: "data"
+  include: true
+  current: false
+  notes:
+   - title: "Do We Need to Create Big Datasets to Learn a Task?"
+     author: "Swaroop Mishra, Bhavdeep Singh Sachdeva"
+     url: "https://aclanthology.org/2020.sustainlp-1.23"
+   - title: "Shortformer: Better Language Modeling using Shorter Inputs"
+     author: "Ofir Press, Noah A. Smith, Mike Lewis"
+     url: "https://aclanthology.org/2021.acl-long.427/"
+   - title: "Active Learning for BERT: An Empirical Study"
+     author: "Liat Ein-Dor, Alon Halfon, Ariel Gera, Eyal Shnarch, Lena Dankin, Leshem Choshen, Marina Danilevsky, Ranit Aharonov, Yoav Katz, Noam Slonim"
+     url: "https://aclanthology.org/2020.emnlp-main.638/"
+- title: "Increasing Context Length"
+  tag: "longcontext"
+  include: true
+  current: false
+  notes:
+   - title: "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation"
+     author: "Ofir Press, Noah A. Smith, Mike Lewis"
+     url: "https://arxiv.org/abs/2108.12409"
+   - title: "Transformer-XL: Attentive Language Models beyond a Fixed-Length Context"
+     author: "Zihang Dai, Zhilin Yang, Yiming Yang, Jaime Carbonell, Quoc Le, Ruslan Salakhutdinov"
+     url: "https://aclanthology.org/P19-1285/"
+   - title: "∞-former: Infinite Memory Transformer"
+     author: "Pedro Henrique Martins, Zita Marinho, Andre Martins"
+     url: "https://aclanthology.org/2022.acl-long.375/"
