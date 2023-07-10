@@ -235,7 +235,7 @@
    - title: "Active Learning for BERT: An Empirical Study"
      author: "Liat Ein-Dor, Alon Halfon, Ariel Gera, Eyal Shnarch, Lena Dankin, Leshem Choshen, Marina Danilevsky, Ranit Aharonov, Yoav Katz, Noam Slonim"
      url: "https://aclanthology.org/2020.emnlp-main.638/"
-- title: "Increasing Context Length"
+- title: "Context Length"
   tag: "longcontext"
   include: true
   current: false
@@ -249,3 +249,11 @@
    - title: "∞-former: Infinite Memory Transformer"
      author: "Pedro Henrique Martins, Zita Marinho, Andre Martins"
      url: "https://aclanthology.org/2022.acl-long.375/"
+- title: "Summary"
+  tag: "summary"
+  include: true
+  current: false
+  notes:
+   - title: "Efficient Methods for Natural Language Processing: A Survey"
+     author: "Marcos Treviso, Ji-Ung Lee, Tianchu Ji, Betty van Aken, Qingqing Cao, Manuel R. Ciosici, Michael Hassid, Kenneth Heafield, Sara Hooker, Colin Raffel, Pedro H. Martins, André F. T. Martins, Jessica Zosa Forde, Peter Milder, Edwin Simpson, Noam Slonim, Jesse Dodge, Emma Strubell, Niranjan Balasubramanian, Leon Derczynski, Iryna Gurevych, Roy Schwartz"
+     url: "https://arxiv.org/abs/2209.00099"
