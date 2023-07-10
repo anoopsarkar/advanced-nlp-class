@@ -200,3 +200,9 @@
     - title: "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?"
       author: "Sewon Min, Xinxi Lyu, Ari Holtzman, Mikel Artetxe, Mike Lewis, Hannaneh Hajishirzi, Luke Zettlemoyer"
       url: "https://arxiv.org/abs/2202.12837"
+- title: "Nearest Neighbour Language Models"
+    - title: Lecture notes
+      url: "assets/slides/knnlm.pdf"
+   - title: "Generalization through Memorization: Nearest Neighbor Language Models"
+     author: "Urvashi Khandelwal, Omer Levy, Dan Jurafsky, Luke Zettlemoyer, Mike Lewis"
+     url: "https://openreview.net/forum?id=HklBjCEKvH"
