@@ -205,8 +205,8 @@
   include: true
   current: false
   notes:
-    - title: Lecture notes
-      url: "assets/slides/knnlm.pdf"
+   - title: Lecture notes
+     url: "assets/slides/knnlm.pdf"
    - title: "Generalization through Memorization: Nearest Neighbor Language Models"
      author: "Urvashi Khandelwal, Omer Levy, Dan Jurafsky, Luke Zettlemoyer, Mike Lewis"
      url: "https://openreview.net/forum?id=HklBjCEKvH"
