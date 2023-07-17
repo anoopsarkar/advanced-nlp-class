@@ -55,7 +55,7 @@ Imagine that you are an archaeologist from the far future, when the English lang
 
 ## The Baseline
 
-You are given a partial implementation of the character clustering model from [Born et al. 2023](https://aclanthology.org/2023.cawl-1.11/). However, we have removed the variational autoencoder (VAE), which encodes images as dense vectors and decodes those vectors to recover the original images. You must complete the model by finishing the partial implementations of `VAE`, `kld()`, and `vae_loss()` provided in `default.py`.
+You are given a partial implementation of the character clustering model from [Born et al. 2023](https://aclanthology.org/2023.cawl-1.11/). However, we have removed the variational autoencoder (VAE), which encodes images as dense vectors and decodes those vectors to recover the original images. You must complete the model by finishing the partial implementations of `kld()` and `vae_loss()` in the class `VAE` provided in `default.py`.
 
 ## Extensions to the Baseline
 
@@ -148,7 +148,7 @@ To create the `source.zip` file for upload to Coursys do:
 
 You must have the following files or `zipsrc.py` will complain about it:
 
-* `answer/signvae.py` -- this can be an empty file for this homework if you didn't change the pre-trained model.
+* `answer/vae.py` -- this is the file containing the implementations of functions `kld()` and `vae_loss()` in the class `VAE`.
 * `answer/signvae.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
 
 Each group member should write about what they did for this homework in the Python notebook.
