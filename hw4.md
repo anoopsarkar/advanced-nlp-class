@@ -176,16 +176,16 @@ Your score should be equal to or greater than the score listed for the correspon
 
 | **Score(test)** | **Marks** | **Grade** |
 | 0.0   | 0   | F  |
-| 0.02  | 55  | D  |
-| 0.04  | 60  | C- |
-| 0.06  | 65  | C  |
-| 0.08  | 70  | C+ |
-| 0.10  | 75  | B- |
-| 0.12  | 80  | B  |
-| 0.14  | 85  | B+ |
-| 0.20  | 90  | A- |
-| 0.24  | 95  | A  |
-| 0.26  | 100 | A+ |
+| 0.10  | 55  | D  |
+| 0.40  | 60  | C- |
+| 0.50  | 65  | C  |
+| 0.60  | 70  | C+ |
+| 0.70  | 75  | B- |
+| 0.83  | 80  | B  |
+| 0.87  | 85  | B+ |
+| 0.88  | 90  | A- |
+| 0.89  | 95  | A  |
+| 0.92  | 100 | A+ |
 {: .table}
 
 The score will be normalized to the marks on Coursys for the dev and test scores.
