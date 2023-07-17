@@ -174,7 +174,7 @@ The grading is split up into the following components:
 
 Your score should be equal to or greater than the score listed for the corresponding marks.
 
-| **Score(test)** | **Marks** | **Grade** |
+| **V-measure(test)** | **Marks** | **Grade** |
 | 0.0   | 0   | F  |
 | 0.10  | 55  | D  |
 | 0.40  | 60  | C- |
