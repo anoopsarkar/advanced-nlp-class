@@ -165,7 +165,6 @@ Go to `Homework 4` on Coursys and do a group submission:
 
 The grading is split up into the following components:
 
-* dev scores (see Table below)
 * test scores (see Table below)
 * iPython notebook write-up 
    * Make sure that you are not using any external data sources in your solution.
@@ -188,5 +187,5 @@ Your score should be equal to or greater than the score listed for the correspon
 | 0.92  | 100 | A+ |
 {: .table}
 
-The score will be normalized to the marks on Coursys for the dev and test scores.
+The score will be normalized to the marks on Coursys for the test scores.
 
