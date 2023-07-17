@@ -136,9 +136,9 @@ The default solution is used by `main.py` and is available in the file `default.
 Once you are done with your homework submit all the relevant materials
 to Coursys for evaluation.
 
-### Create output.zip
+### Create output.npz
 
-Create `output.zip` using the instructions above and upload to Coursys.
+Create `output.npz` using the instructions above and upload to Coursys.
 
 ### Create source.zip
 
@@ -157,7 +157,7 @@ Each group member should write about what they did for this homework in the Pyth
 
 Go to `Homework 4` on Coursys and do a group submission:
 
-* Upload `output.zip` and `source.zip`
+* Upload `output.npz` and `source.zip`
 * Make sure you have documented your approach in `answer/signvae.ipynb`.
 * Make sure each member of your group has documented their contribution to this homework in the Python notebook.
 
