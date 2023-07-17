@@ -55,7 +55,7 @@ Imagine that you are an archaeologist from the far future, when the English lang
 
 ## The Baseline
 
-You are given a partial implementation of the character clustering model from [Born et al. 2023](...). However, we have removed the variational autoencoder (VAE), which encodes images as dense vectors and decodes those vectors to recover the original images. You must complete the model by finishing the partial implementations of `VAE`, `kld()`, and `vae_loss()` provided in `default.py`. 
+You are given a partial implementation of the character clustering model from [Born et al. 2023](https://aclanthology.org/2023.cawl-1.11/). However, we have removed the variational autoencoder (VAE), which encodes images as dense vectors and decodes those vectors to recover the original images. You must complete the model by finishing the partial implementations of `VAE`, `kld()`, and `vae_loss()` provided in `default.py`.
 
 ## Extensions to the Baseline
 
