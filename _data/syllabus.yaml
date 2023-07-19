@@ -199,7 +199,7 @@
 - title: "Few-shot learning"
   tag: "fewshot"
   include: true
-  current: true
+  current: false
   notes:
     - title: Lecture notes
       url: "assets/slides/fewshot.pdf"
@@ -228,6 +228,9 @@
     - title: "Proximal Policy Optimization Algorithms"
       author: "John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Klimov"
       url: "https://arxiv.org/abs/1707.06347"
+    - title: "LIMA: Less Is More for Alignment"
+      author: "Chunting Zhou, Pengfei Liu, Puxin Xu, Srini Iyer, Jiao Sun, Yuning Mao, Xuezhe Ma, Avia Efrat, Ping Yu, Lili Yu, Susan Zhang, Gargi Ghosh, Mike Lewis, Luke Zettlemoyer, Omer Levy"
+      url: "https://arxiv.org/abs/2305.11206"
 - title: "Nearest Neighbour Language Models"
   tag: "knnlm"
   include: true
@@ -238,6 +241,36 @@
    - title: "Generalization through Memorization: Nearest Neighbor Language Models"
      author: "Urvashi Khandelwal, Omer Levy, Dan Jurafsky, Luke Zettlemoyer, Mike Lewis"
      url: "https://openreview.net/forum?id=HklBjCEKvH"
+   - title: "Improving language models by retrieving from trillions of tokens"
+     author: "Deepmind"
+     url: "https://arxiv.org/abs/2112.04426"
+  links:
+    - title: "Nearest Neighbor Knowledge Distillation for Neural Machine Translation"
+      author: "Zhixian Yang, Renliang Sun, Xiaojun Wan"
+      url: "https://aclanthology.org/2022.naacl-main.406/"
+- title: "Variational Auto-encoding for Language"
+  tag: "vae"
+  include: true
+  current: true
+  notes:
+   - title: Lecture notes
+     url: "assets/slides/vae.pdf"
+   - title: "Tutorial - What is a variational autoencoder?"
+     author: "Jaan Altosaar"
+     url: "https://jaan.io/what-is-variational-autoencoder-vae-tutorial/"
+   - title: "Optimus: Organizing Sentences via Pre-trained Modeling of a Latent Space"
+     author: "Chunyuan Li, Xiang Gao, Yuan Li, Baolin Peng, Xiujun Li, Yizhe Zhang, Jianfeng Gao"
+     url: "https://aclanthology.org/2020.emnlp-main.378/"
+   - title: "Finetuning Pretrained Transformers into Variational Autoencoders"
+     author: "Seongmin Park, Jihwa Lee"
+     url: "https://aclanthology.org/2021.insights-1.5/"
+  links:
+   - title: "Neural Variational Inference for Text Processing"
+     author: "Yishu Miao, Lei Yu, Phil Blunsom"
+     url: "https://proceedings.mlr.press/v48/miao16.html"
+   - title: "Improved Variational Autoencoders for Text Modeling using Dilated Convolutions"
+     author: "Zichao Yang, Zhiting Hu, Ruslan Salakhutdinov, Taylor Berg-Kirkpatrick"
+     url: "https://proceedings.mlr.press/v70/yang17d/yang17d.pdf"
 - title: "Fast Attention"
   tag: "fastattn"
   include: true
