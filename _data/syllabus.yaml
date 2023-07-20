@@ -265,6 +265,9 @@
      author: "Seongmin Park, Jihwa Lee"
      url: "https://aclanthology.org/2021.insights-1.5/"
   links:
+   - title: "Digit Fantasies by a Deep Generative Model"
+     author: "Durk Kingma"
+     url: "http://dpkingma.com/sgvb_mnist_demo/demo.html"
    - title: "Neural Variational Inference for Text Processing"
      author: "Yishu Miao, Lei Yu, Phil Blunsom"
      url: "https://proceedings.mlr.press/v48/miao16.html"
