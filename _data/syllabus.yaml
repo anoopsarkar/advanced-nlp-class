@@ -280,22 +280,20 @@
    - title: "Digit Fantasies by a Deep Generative Model"
      author: "Durk Kingma"
      url: "http://dpkingma.com/sgvb_mnist_demo/demo.html"
-- title: "Fast Attention"
+- title: "Fast Attention and Context Length"
   tag: "fastattn"
   include: true
   current: true
   notes:
+   - title: "Efficient Transformers: A Survey"
+     author: "Yi Tay, Mostafa Dehghani, Dara Bahri, Donald Metzler"
+     url: "https://arxiv.org/abs/2009.06732"
    - title: "Reformer: The Efficient Transformer"
      author: "Nikita Kitaev, Lukasz Kaiser, Anselm Levskaya"
      url: "https://openreview.net/forum?id=rkgNKkHtvB"
    - title: "Rethinking Attention with Performers"
      author: "Krzysztof Marcin Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Quincy Davis, Afroz Mohiuddin, Lukasz Kaiser, David Benjamin Belanger, Lucy J Colwell, Adrian Weller"
      url: "https://openreview.net/forum?id=Ua6zuk0WRH"
-- title: "Context Length"
-  tag: "longcontext"
-  include: true
-  current: false
-  notes:
    - title: "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation"
      author: "Ofir Press, Noah A. Smith, Mike Lewis"
      url: "https://arxiv.org/abs/2108.12409"
