@@ -251,7 +251,7 @@
 - title: "Variational Auto-encoding for Language"
   tag: "vae"
   include: true
-  current: true
+  current: false
   notes:
    - title: Lecture notes
      url: "assets/slides/vae.pdf"
@@ -283,7 +283,7 @@
 - title: "Fast Attention"
   tag: "fastattn"
   include: true
-  current: false
+  current: true
   notes:
    - title: "Reformer: The Efficient Transformer"
      author: "Nikita Kitaev, Lukasz Kaiser, Anselm Levskaya"
