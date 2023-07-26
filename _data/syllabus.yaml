@@ -303,6 +303,9 @@
    - title: "∞-former: Infinite Memory Transformer"
      author: "Pedro Henrique Martins, Zita Marinho, Andre Martins"
      url: "https://aclanthology.org/2022.acl-long.375/"
+   - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+     author: "Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, Christopher Ré"
+     url: "https://arxiv.org/abs/2205.14135"
 - title: "Data Efficiency"
   tag: "data"
   include: true
@@ -325,3 +328,6 @@
    - title: "Efficient Methods for Natural Language Processing: A Survey"
      author: "Marcos Treviso, Ji-Ung Lee, Tianchu Ji, Betty van Aken, Qingqing Cao, Manuel R. Ciosici, Michael Hassid, Kenneth Heafield, Sara Hooker, Colin Raffel, Pedro H. Martins, André F. T. Martins, Jessica Zosa Forde, Peter Milder, Edwin Simpson, Noam Slonim, Jesse Dodge, Emma Strubell, Niranjan Balasubramanian, Leon Derczynski, Iryna Gurevych, Roy Schwartz"
      url: "https://arxiv.org/abs/2209.00099"
+   - title: "Efficient Transformers: A Survey"
+     author: "Yi Tay, Mostafa Dehghani, Dara Bahri, Donald Metzler"
+     url: "https://arxiv.org/abs/2009.06732"
