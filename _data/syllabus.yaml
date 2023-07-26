@@ -291,20 +291,6 @@
    - title: "Rethinking Attention with Performers"
      author: "Krzysztof Marcin Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Quincy Davis, Afroz Mohiuddin, Lukasz Kaiser, David Benjamin Belanger, Lucy J Colwell, Adrian Weller"
      url: "https://openreview.net/forum?id=Ua6zuk0WRH"
-- title: "Data Efficiency"
-  tag: "data"
-  include: true
-  current: false
-  notes:
-   - title: "Do We Need to Create Big Datasets to Learn a Task?"
-     author: "Swaroop Mishra, Bhavdeep Singh Sachdeva"
-     url: "https://aclanthology.org/2020.sustainlp-1.23"
-   - title: "Shortformer: Better Language Modeling using Shorter Inputs"
-     author: "Ofir Press, Noah A. Smith, Mike Lewis"
-     url: "https://aclanthology.org/2021.acl-long.427/"
-   - title: "Active Learning for BERT: An Empirical Study"
-     author: "Liat Ein-Dor, Alon Halfon, Ariel Gera, Eyal Shnarch, Lena Dankin, Leshem Choshen, Marina Danilevsky, Ranit Aharonov, Yoav Katz, Noam Slonim"
-     url: "https://aclanthology.org/2020.emnlp-main.638/"
 - title: "Context Length"
   tag: "longcontext"
   include: true
@@ -319,6 +305,20 @@
    - title: "∞-former: Infinite Memory Transformer"
      author: "Pedro Henrique Martins, Zita Marinho, Andre Martins"
      url: "https://aclanthology.org/2022.acl-long.375/"
+- title: "Data Efficiency"
+  tag: "data"
+  include: true
+  current: false
+  notes:
+   - title: "Do We Need to Create Big Datasets to Learn a Task?"
+     author: "Swaroop Mishra, Bhavdeep Singh Sachdeva"
+     url: "https://aclanthology.org/2020.sustainlp-1.23"
+   - title: "Shortformer: Better Language Modeling using Shorter Inputs"
+     author: "Ofir Press, Noah A. Smith, Mike Lewis"
+     url: "https://aclanthology.org/2021.acl-long.427/"
+   - title: "Active Learning for BERT: An Empirical Study"
+     author: "Liat Ein-Dor, Alon Halfon, Ariel Gera, Eyal Shnarch, Lena Dankin, Leshem Choshen, Marina Danilevsky, Ranit Aharonov, Yoav Katz, Noam Slonim"
+     url: "https://aclanthology.org/2020.emnlp-main.638/"
 - title: "Summary"
   tag: "summary"
   include: true
