@@ -116,6 +116,8 @@ By default, this will zip the `vae_z` feature vectors. If you have added a new f
 python3 zipout.py your_feature_name
 ```
 
+Copy the `output.npz` file to `output.zip` to upload to Coursys. You will need a `.zip` suffix to pass the Coursys check on valid filename.
+
 ## Pre-trained Model
 
 A pre-trained mnodel is available for use in `data/trained.pt` and `data/trained.config`.
@@ -136,9 +138,9 @@ The default solution is used by `main.py` and is available in the file `default.
 Once you are done with your homework submit all the relevant materials
 to Coursys for evaluation.
 
-### Create output.npz
+### Create output.zip
 
-Create `output.npz` using the instructions above and upload to Coursys.
+Create `output.zip` using the instructions above and upload to Coursys (remember to copy `output.npz` to `output.zip`).
 
 ### Create source.zip
 
@@ -157,7 +159,7 @@ Each group member should write about what they did for this homework in the Pyth
 
 Go to `Homework 4` on Coursys and do a group submission:
 
-* Upload `output.npz` and `source.zip`
+* Upload `output.zip` and `source.zip`
 * Make sure you have documented your approach in `answer/signvae.ipynb`.
 * Make sure each member of your group has documented their contribution to this homework in the Python notebook.
 
